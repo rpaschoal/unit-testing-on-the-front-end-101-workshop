@@ -6,6 +6,7 @@ This repository contains the technical material for a 101 Workshop on how to uni
 * Pre-requisites
 * Creating a new React App using CRA
 * Creating a simple React component
+* Adding unit tests to our TodoList component
 
 ## Pre-requisites
 
@@ -59,3 +60,31 @@ npm start
 ```
 
 You should now be seeing a very simple but functional Todo list 🎉.
+
+## Adding unit tests to our TodoList component
+
+For our unit tests we will be using Jest and Enzyme. Before we create our tests file, let's make sure we install the following packages. Run the following on your terminal:
+
+```
+npm install --save enzyme enzyme-adapter-react-16 react-test-renderer @types/enzyme-adapter-react-16
+```
+
+Update your `src/setupTests.ts` to look like the following:
+
+```
+// jest-dom adds custom jest matchers for asserting on DOM nodes.
+// allows you to do things like:
+// expect(element).toHaveTextContent(/react/i)
+// learn more: https://github.com/testing-library/jest-dom
+import '@testing-library/jest-dom/extend-expect';
+import { configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+configure({ adapter: new Adapter() });
+```
+
+Now let's create a test file for our `TodoList` component. On the same folder as the component TS file itself, create a new file and name it as `TodoList.test.tsx`. This is the file we will be using during the workshop to add some unit test coverage to our `TodoList` component.
+
+**Take a break from this walkthrough. Let's now implement together our unit tests**
+
+_In case you're reading this outside of the workshop itself, the final result can be found here: https://github.com/rpaschoal/unit-testing-on-the-front-end-101-workshop/blob/master/src/components/Todo/TodoList.test.tsx_
