@@ -45,4 +45,17 @@ We will be using a simple TODO component (How _innovative_ 😛) as an example s
 npm install node-sass --save
 ```
 
-This will allow us to use Sass stylesheets on our components.
+This will allow us to use Sass stylesheets on our components. Here are the files you should be copying/replacing to speed up time on this workshop:
+
+* src/App.tsx
+* src/index.css
+* src/components/Todo/Todo.module.scss
+* src/components/Todo/Todo.tsx
+
+With all the above copied to your local development environment, run the following on your terminal (within the project's folder):
+
+```
+npm start
+```
+
+You should now be seeing a very simple but functional Todo list 🎉.
