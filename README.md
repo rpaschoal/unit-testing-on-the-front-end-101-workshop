@@ -5,6 +5,7 @@ This repository contains the technical material for a 101 Workshop on how to uni
 
 * Pre-requisites
 * Creating a new React App using CRA
+* Creating a simple React component
 
 ## Pre-requisites
 
@@ -35,3 +36,13 @@ npx create-react-app unit-testing-on-the-front-end-101-workshop --template types
 cd my-app
 npm start
 ```
+
+## Creating a simple React component
+
+We will be using a simple TODO component (How _innovative_ 😛) as an example so we can unit test it. The source code for this component can be found on this repository under the `src/components/Todo` path. Before you copy these, please run the following on your terminal under your React app's folder:
+
+```
+npm install node-sass --save
+```
+
+This will allow us to use Sass stylesheets on our components.
