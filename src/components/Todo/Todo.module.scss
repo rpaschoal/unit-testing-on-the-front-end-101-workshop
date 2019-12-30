@@ -1,0 +1,30 @@
+$box-height: 400px;
+
+.todo-list {
+    width: 400px;
+    min-height: $box-height;
+    max-height: $box-height;
+    overflow: auto;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ed8700;
+    color: #FFF;
+    border-radius: 3px;
+    -webkit-box-shadow: 10px 10px 20px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 20px -8px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 20px -8px rgba(0,0,0,0.75);
+
+    .todo-list-header > form input,
+    .todo-list-header > form button {
+        padding: 10px;
+    }
+
+    .todo-list-items {
+        text-align: left;
+
+        & > li {
+            padding: 3px 0;
+        }
+    }
+}
