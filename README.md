@@ -89,4 +89,10 @@ Now let's create a test file for our `TodoList` component. On the same folder as
 
 _In case you're reading this outside of the workshop itself, the final result can be found here: https://github.com/rpaschoal/unit-testing-on-the-front-end-101-workshop/blob/master/src/components/Todo/TodoList.test.tsx_
 
+Run the following on your terminal to run your unit tests:
+
+```
+npm test
+```
+
 Thank you for attending! 😊
