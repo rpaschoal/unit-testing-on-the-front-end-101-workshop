@@ -31,7 +31,7 @@ _The info above was taken from the official ReactJS docs. For further info: http
 So now that we've covered the basics on CRA, let's create a new React app by opening a terminal, navigating to a folder of preference and running the following:
 
 ```
-npx create-react-app unit-testing-on-the-front-end-101-workshop
+npx create-react-app unit-testing-on-the-front-end-101-workshop --template typescript
 cd my-app
 npm start
 ```
