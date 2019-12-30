@@ -2,7 +2,7 @@
 
 import React, { useState, useRef } from 'react'
 
-import styles from './Todo.module.scss' ;
+import styles from './TodoList.module.scss' ;
 
 interface ITodoItemProps {
     itemText: string;
