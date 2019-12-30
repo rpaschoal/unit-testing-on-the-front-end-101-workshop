@@ -85,7 +85,7 @@ configure({ adapter: new Adapter() });
 
 Now let's create a test file for our `TodoList` component. On the same folder as the component TS file itself, create a new file and name it as `TodoList.test.tsx`. This is the file we will be using during the workshop to add some unit test coverage to our `TodoList` component.
 
-**Take a break from this walkthrough. Let's now implement together our unit tests**
+**Take a break from this walkthrough. Let's now implement together our unit tests! 💻**
 
 _In case you're reading this outside of the workshop itself, the final result can be found here: https://github.com/rpaschoal/unit-testing-on-the-front-end-101-workshop/blob/master/src/components/Todo/TodoList.test.tsx_
 
