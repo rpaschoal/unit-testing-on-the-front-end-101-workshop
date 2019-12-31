@@ -59,4 +59,22 @@ describe("<Todo", () => {
 
       expect(todoItem.exists()).toBeFalsy();
     });
+
+    it('should not remove task when user does not confirm action', () => {
+      const taskText = 'Test Task Text';
+
+      window.confirm = jest.fn().mockImplementation(() => false);
+
+      addTaskToSubject(taskText);
+
+      subject
+        .find('.todo-list-items li a')
+        .at(0)
+        .simulate('click');
+
+      const todoItem = subject.find('.todo-list-items li span').at(0);
+
+      expect(todoItem.exists()).toBeTruthy();
+      expect(todoItem.text()).toBe(taskText);
+    });
 });
