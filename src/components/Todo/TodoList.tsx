@@ -12,12 +12,13 @@ interface ITodoItemProps {
 const TodoItem: React.FC<ITodoItemProps> = props => {
     return (
         <li>
-            {props.itemText} <a href="#" onClick={() => props.onRemove(props.itemText)}>(Remove)</a>
+            <span>{props.itemText}</span><a href="#" onClick={() => props.onRemove(props.itemText)}> (Remove)</a>
         </li>
     );
 };
 
 const TodoList: React.FC = () => {
+    const [newTaskText, setNewTaskText] = useState<string>('');
     const [todoItems, setTodoItems] = useState<string[]>([]);
     const inputRef = useRef<HTMLInputElement>(null);
 
@@ -33,7 +34,7 @@ const TodoList: React.FC = () => {
                 setTodoItems([...todoItems, itemText]);
             }
 
-            inputRef.current.value = '';
+            setNewTaskText('');
         }
     }
 
@@ -44,12 +45,23 @@ const TodoList: React.FC = () => {
             setTodoItems([...todoItems.slice(0, indexToRemove), ...todoItems.slice(indexToRemove + 1)]);
     }
 
+    const newTaskTextUpdated = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setNewTaskText(event.target.value);
+    }
+
     return (
         <div className={styles["todo-list"]}>
             <div className={styles["todo-list-header"]}>
                 <form onSubmit={addTodoItem}>
-                    <input placeholder="Enter your Task" ref={inputRef} required/>
-                    <button type="submit" >Add Task</button>
+                    <input 
+                        type="text" 
+                        placeholder="Enter your Task" 
+                        ref={inputRef} 
+                        required
+                        onChange={newTaskTextUpdated}
+                        value={newTaskText}
+                    />
+                    <button type="submit">Add Task</button>
                 </form>
             </div>
             <ul className={styles["todo-list-items"]}>
