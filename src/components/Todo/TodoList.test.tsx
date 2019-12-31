@@ -46,6 +46,8 @@ describe("<Todo", () => {
     });
 
     it('should remove task', () => {
+      window.confirm = jest.fn().mockImplementation(() => true);
+
       addTaskToSubject('Test Task');
 
       subject

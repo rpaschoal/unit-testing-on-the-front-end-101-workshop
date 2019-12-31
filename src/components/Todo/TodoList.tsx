@@ -39,10 +39,13 @@ const TodoList: React.FC = () => {
     }
 
     const removeTodoItem = (itemText: string) => {
-        const indexToRemove = todoItems.findIndex(t => t === itemText);
+        if(window.confirm('Are you sure you want to remove this task?'))
+        {
+            const indexToRemove = todoItems.findIndex(t => t === itemText);
 
-        if (indexToRemove >= 0)
-            setTodoItems([...todoItems.slice(0, indexToRemove), ...todoItems.slice(indexToRemove + 1)]);
+            if (indexToRemove >= 0)
+                setTodoItems([...todoItems.slice(0, indexToRemove), ...todoItems.slice(indexToRemove + 1)]);
+        }
     }
 
     const newTaskTextUpdated = (event: React.ChangeEvent<HTMLInputElement>) => {
