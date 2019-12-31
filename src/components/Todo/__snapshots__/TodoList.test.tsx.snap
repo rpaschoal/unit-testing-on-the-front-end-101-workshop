@@ -1,3 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Todo should match snapshot 1`] = `ReactWrapper {}`;
+exports[`<Todo should match snapshot 1`] = `
+"<TodoList>
+  <div className=\\"todo-list\\">
+    <div className=\\"todo-list-header\\">
+      <form onSubmit={[Function: addTodoItem]}>
+        <input type=\\"text\\" placeholder=\\"Enter your Task\\" required={true} onChange={[Function: newTaskTextUpdated]} value=\\"\\" />
+        <button type=\\"submit\\">
+          Add Task
+        </button>
+      </form>
+    </div>
+    <ul className=\\"todo-list-items\\" />
+  </div>
+</TodoList>"
+`;
